@@ -13,13 +13,14 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/floating-labels.css" rel="stylesheet" />
     <script src="~/Content/jquery.min.js"></script>
+    <script src="~/Content/custom.js"></script>
 </head>
 <body>
     <form class="form-signin">
         <div class="text-center mb-4">
-            <img class="mb-4" src="~/Content/bootstrap-solid.svg" alt="" width="72" height="72">
+            <a href="@Url.Action("Index","Home")"><img class="mb-4" src="~/Content/bootstrap-solid.svg" alt="" width="72" height="72"></a>
             <h1 class="h3 mb-3 font-weight-normal">iApologize</h1>
-            <p>Được xây dựng nhầm mục đích <code>XIN LỖI BỒ</code><br /><a href="#" onclick="alert('Không tin thì thử đi :)')">Hoạt động trên mọi trình duyệt và hệ điều hành.</a></p>
+            <p>Được xây dựng nhầm mục đích <code>XIN LỖI BỒ</code><br /><a href=".">Hoạt động trên mọi trình duyệt và hệ điều hành.</a></p>
         </div>
         <div class="card">
             <div class="card-body result">
@@ -29,7 +30,7 @@
                 <textarea class="form-control" rows="8" readonly>
                 @foreach (var item in CapistringSory.Models.StringValue.resultList)
                 {
-                    @item Html.Raw("&#13;&#10;");
+                    @item.Trim()@Html.Raw("&#13;&#10;")
                 }
                 </textarea>
             </div>

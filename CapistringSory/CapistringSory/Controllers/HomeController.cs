@@ -24,9 +24,9 @@ namespace CapistringSory.Controllers
         [HttpPost]
         public ActionResult Submit(FormCollection collection)
         {
-            string inputString = collection["inputValue"];
+            string inputString = collection["inputValue"].ToLower();
             int stringLength = inputString.Length;
-            string defaultValue = inputString;
+            string defaultValue = inputString.ToLower();
             int step = 0;
             string uppercaseChar;
 
