@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="~/Content/favicon.ico">
+    <title>Bồ tui tên là Đỗ Thị Trà My</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/floating-labels.css" rel="stylesheet" />
+    <script src="~/Content/jquery.min.js"></script>
+</head>
+<body>
+    <form class="form-signin">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="~/Content/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">iApologize</h1>
+            <p>Được xây dựng nhầm mục đích <code>XIN LỖI BỒ</code><br /><a href="#" onclick="alert('Không tin thì thử đi :)')">Hoạt động trên mọi trình duyệt và hệ điều hành.</a></p>
+        </div>
+        <div class="card">
+            <div class="card-body result">
+                <h5 class="card-title">Đã tạo ra <span class="text-danger">@CapistringSory.Models.StringValue.resultList.Count </span> Kết quả</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Bấm nút sao chép để copy</h6>
+                <hr />
+                <textarea class="form-control" rows="8" readonly>
+                @foreach (var item in CapistringSory.Models.StringValue.resultList)
+                {
+                    @item Html.Raw("&#13;&#10;");
+                }
+                </textarea>
+            </div>
+        </div>
+        <button style="margin-top: 20px" onclick="Copy()" class="btn btn-lg btn-primary btn-block" type="submit">Sao chép</button>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2019 - Bởi anh IT thương bồ nhất vũ trụ Marvel</p>
+    </form>
+    <script>
+        function Copy() {
+            $("textarea").select();
+            document.execCommand('copy');
+            alert("Đã sao chép :D");
+        }
+    </script>
+</body>
+</html>

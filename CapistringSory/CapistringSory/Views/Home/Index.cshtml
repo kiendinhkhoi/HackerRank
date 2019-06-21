@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="~/Content/favicon.ico">
+    <title>Bồ tui tên là Đỗ Thị Trà My</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/floating-labels.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="form-signin" method="post" action="@Url.Action("Submit","Home")">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="~/Content/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">iApologize</h1>
+            <p>Được xây dựng nhầm mục đích <code>XIN LỖI BỒ</code><br /><a href=".">Hoạt động trên mọi trình duyệt và hệ điều hành.</a></p>
+        </div>
+        <div class="form-label-group">
+            <input type="text" id="input" name="inputValue" class="form-control" placeholder="Nhập câu gì đó vào đây" required autofocus>
+            <label for="input">Câu xin lỗi</label>
+        </div>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Lấy dữ liệu</button>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2019 - Bởi anh IT thương bồ nhất vũ trụ Marvel</p>
+    </form>
+</body>
+</html>
